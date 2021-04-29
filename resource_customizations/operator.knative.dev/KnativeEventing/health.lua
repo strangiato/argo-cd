@@ -10,6 +10,14 @@ if obj.status ~= nil then
         numTrue = numTrue + 1
       elseif condition.type == "InstallSucceeded" and condition.status == "True" then
         numTrue = numTrue + 1
+      elseif condition.type == "DependenciesInstalled" and condition.status == "True" then
+        numTrue = numTrue + 1
+      elseif condition.type == "DeploymentsAvailable" and condition.status == "True" then
+        numTrue = numTrue + 1
+      elseif condition.type == "Ready" and condition.status == "False" then
+        numFalse = numFalse + 1
+      elseif condition.type == "DeploymentsAvailable" and condition.status == "False" then
+        numFalse = numFalse + 1
       elseif condition.status == "Unknown" then
         numFalse = numFalse + 1
       end
@@ -18,7 +26,7 @@ if obj.status ~= nil then
       health_status.message = msg
       health_status.status = "Progressing"
       return health_status
-    elseif(numTrue == 2) then
+    elseif(numTrue == 4) then
       health_status.message = "KnativeEventing is healthy."
       health_status.status = "Healthy"
       return health_status
