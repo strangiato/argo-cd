@@ -17,7 +17,7 @@ tests:
   inputPath: testdata/degraded-modelmesh.yaml
 - healthStatus:
     status: Healthy
-    message: InferenceService is healthy.
+    message: InferenceService is healthy. Break stuff
   inputPath: testdata/healthy.yaml
 - healthStatus:
     status: Healthy
