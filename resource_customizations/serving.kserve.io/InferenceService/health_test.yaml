@@ -21,7 +21,7 @@ tests:
   inputPath: testdata/healthy.yaml
 - healthStatus:
     status: Healthy
-    message: Inference Service is healthy.
+    message: InferenceService is healthy.
   inputPath: testdata/healthy_modelmesh.yaml
 - healthStatus:
     status: Healthy
