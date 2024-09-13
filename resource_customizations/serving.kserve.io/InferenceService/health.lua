@@ -18,7 +18,7 @@ if obj.status ~= nil then
       else
         degraded = true
       end
-      msg = msg .. "0: transitionStatus | " .. obj.status.modelStatus.transitionStatus .. "\n"
+      msg = msg .. "0: transitionStatus | " .. obj.status.modelStatus.transitionStatus .. " | "
     end
   end
   
@@ -39,7 +39,7 @@ if obj.status ~= nil then
         if condition.message ~= nil and condition.message ~= "" then
           msg = msg .. " | " .. condition.message
         end
-        msg = msg .. "\n"
+        msg = msg .. " | "
       end
 
     end

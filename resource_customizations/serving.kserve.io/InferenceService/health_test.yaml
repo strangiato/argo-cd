@@ -1,19 +1,19 @@
 tests:
 # - healthStatus:
 #     status: Progressing
-#     message: '0: transitionStatus | InProgress \n1: LatestDeploymentReady | Unknown | PredictorConfigurationReady not ready 2: \nPredictorConfigurationReady | Unknown \n3: PredictorReady | Unknown | RevisionMissing | Configuration "helloworld-predictor" is waiting for a Revision to become ready. \n4: PredictorRouteReady | Unknown | RevisionMissing | Configuration "helloworld-predictor" is waiting for a Revision to become ready. \n5: Ready | Unknown | RevisionMissing | Configuration "helloworld-predictor" is waiting for a Revision to become ready. \n6: RoutesReady | Unknown | PredictorRouteReady not ready\n'
+#     message: '0: transitionStatus | InProgress  | 1: LatestDeploymentReady | Unknown | PredictorConfigurationReady not ready 2:  | PredictorConfigurationReady | Unknown  | 3: PredictorReady | Unknown | RevisionMissing | Configuration "helloworld-predictor" is waiting for a Revision to become ready.  | 4: PredictorRouteReady | Unknown | RevisionMissing | Configuration "helloworld-predictor" is waiting for a Revision to become ready.  | 5: Ready | Unknown | RevisionMissing | Configuration "helloworld-predictor" is waiting for a Revision to become ready.  | 6: RoutesReady | Unknown | PredictorRouteReady not ready | '
 #   inputPath: testdata/progressing.yaml
 - healthStatus:
     status: Progressing
-    message: "0: transitionStatus | InProgress\n1: PredictorReady | False\n2: Ready | False\n"
+    message: "0: transitionStatus | InProgress | 1: PredictorReady | False | 2: Ready | False | "
   inputPath: testdata/progressing_modelmesh.yaml
 - healthStatus:
     status: Degraded
-    message: '0: transitionStatus | BlockedByFailedLoad\n1: LatestDeploymentReady | False | PredictorConfigurationReady not ready\n2: PredictorConfigurationReady | False | RevisionFailed | Revision "helloworld-predictor-00002" failed with message: .\n3: PredictorReady | False | RevisionMissing | Configuration "helloworld-predictor" does not have any ready Revision.\n4: PredictorRouteReady | False | RevisionMissing | Configuration "helloworld-predictor" does not have any ready Revision.\n5: Ready | False | RevisionMissing | Configuration "helloworld-predictor" does not have any ready Revision.\n6: RoutesReady | False | PredictorRouteReady not ready\n'
+    message: '0: transitionStatus | BlockedByFailedLoad | 1: LatestDeploymentReady | False | PredictorConfigurationReady not ready | 2: PredictorConfigurationReady | False | RevisionFailed | Revision "helloworld-predictor-00002" failed with message: . | 3: PredictorReady | False | RevisionMissing | Configuration "helloworld-predictor" does not have any ready Revision. | 4: PredictorRouteReady | False | RevisionMissing | Configuration "helloworld-predictor" does not have any ready Revision. | 5: Ready | False | RevisionMissing | Configuration "helloworld-predictor" does not have any ready Revision. | 6: RoutesReady | False | PredictorRouteReady not ready | '
   inputPath: testdata/degraded.yaml
 - healthStatus:
     status: Degraded
-    message: "0: transitionStatus | BlockedByFailedLoad\n"
+    message: "0: transitionStatus | BlockedByFailedLoad | "
   inputPath: testdata/degraded_modelmesh.yaml
 - healthStatus:
     status: Healthy
