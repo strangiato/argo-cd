@@ -15,14 +15,14 @@ tests:
 #     status: Degraded
 #     message: "0: transitionStatus | BlockedByFailedLoad\n"
 #   inputPath: testdata/degraded-modelmesh.yaml
-# - healthStatus:
-#     status: Healthy
-#     message: InferenceService is healthy. Break stuff
-#   inputPath: testdata/healthy.yaml
-# - healthStatus:
-#     status: Healthy
-#     message: Inference Service is healthy.
-#   inputPath: testdata/healthy-modelmesh.yaml
+- healthStatus:
+    status: Healthy
+    message: InferenceService is healthy.
+  inputPath: testdata/healthy.yaml
+- healthStatus:
+    status: Healthy
+    message: Inference Service is healthy.
+  inputPath: testdata/healthy-modelmesh.yaml
 - healthStatus:
     status: Healthy
     message: InferenceService is healthy.
